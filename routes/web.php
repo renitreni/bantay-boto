@@ -1,5 +1,9 @@
 <?php
 
+use App\Http\Livewire\BlogCreate;
+use App\Http\Livewire\BlogEdit;
+use App\Http\Livewire\Blogs;
+use App\Http\Livewire\Landing;
 use App\Http\Livewire\PermissionEdit;
 use App\Http\Livewire\RoleCreate;
 use App\Http\Livewire\RoleEdit;
@@ -21,13 +25,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', Landing::class)->name('user.create');
 
 Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::prefix('dashboard')->group(function () {
         Route::get('/', fn() => view('dashboard'))->name('dashboard');
+    });
+    Route::prefix('blogs')->group(function () {
+        Route::get('/', Blogs::class)->name('blogs');
+        Route::get('/create', BlogCreate::class)->name('blog.create');
+        Route::get('/edit/{id}', BlogEdit::class)->name('blog.edit');
     });
     Route::prefix('manage-users')->group(function () {
         Route::get('/users', fn() => view('users'))->name('users');

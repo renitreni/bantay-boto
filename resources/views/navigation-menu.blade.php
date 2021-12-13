@@ -15,6 +15,9 @@
                 <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
                     {{ __('Dashboard') }}
                 </x-jet-nav-link>
+                <x-jet-nav-link href="{{ route('blogs') }}" :active="request()->routeIs('blogs')">
+                    {{ __('Blogs') }}
+                </x-jet-nav-link>
 
                 <x-nav-dropdown-link id="manageUserDropdown" :active="request()->routeIs('users')">
                     <x-slot name="trigger">

@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Blog;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
@@ -19,6 +20,7 @@ class DatabaseSeeder extends Seeder
             'remember_token'    => Str::random(10),
         ]);
         User::factory(10)->create();
+        Blog::factory(50)->create();
         $this->call(PermissionsTableSeeder::class);
         $this->call(ConnectRelationshipsSeeder::class);
     }
