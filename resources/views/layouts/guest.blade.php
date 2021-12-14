@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="{{ asset('theme/aznews-master/assets/css/nice-select.css') }}">
     <link rel="stylesheet" href="{{ asset('theme/aznews-master/assets/css/style.css') }}">
     <!-- Styles -->
-
+    @stack('css')
     @livewireStyles
 </head>
 <body>
