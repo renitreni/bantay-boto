@@ -2,7 +2,7 @@
     @push('css')
         <style>
             .hero {
-                background: url('http://bantay-boto.test/images/header-bg.png') rgba(255, 17, 17, 0.41);
+                background: url({{ asset('images/header-bg.png') }}) rgba(255, 17, 17, 0.41);
                 background-size: cover;
                 background-blend-mode: multiply;
             }
