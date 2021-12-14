@@ -20,7 +20,6 @@ class DatabaseSeeder extends Seeder
             'remember_token'    => Str::random(10),
         ]);
         User::factory(10)->create();
-        Blog::factory(50)->create();
         $this->call(PermissionsTableSeeder::class);
         $this->call(ConnectRelationshipsSeeder::class);
     }

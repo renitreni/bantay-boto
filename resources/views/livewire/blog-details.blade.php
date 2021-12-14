@@ -6,22 +6,25 @@
                 <div class="col-lg-8 posts-list">
                     <div class="single-post">
                         <div class="feature-img">
-                            <img class="img-fluid" src="{{ $details->header_img }}" style="width: 100%; height: 300px" alt="">
+                            <img class="img-fluid" src="{{ $details->header_img }}" style="width: 100%; height: 300px"
+                                 alt="">
                         </div>
                         <div class="blog_details">
                             <h2>{{ $details->title }}</h2>
                             <ul class="blog-info-link mt-3 mb-4">
                                 <li><a href="#"><i class="fa fa-user"></i>
                                         @foreach($details->tags as $tag)
-                                            <span class="badge bg-secondary">{{ $tag->name }}</span>
+                                            <span class="badge bg-light">{{ $tag->name }}</span>
                                         @endforeach
                                     </a></li>
-{{--                                <li><a href="#"><i class="fa fa-comments"></i> 03 Comments</a></li>--}}
+                                {{--                                <li><a href="#"><i class="fa fa-comments"></i> 03 Comments</a></li>--}}
                             </ul>
-                            <div class="mb-2">
-                                {!! $details->header_video !!}
-                            </div>
-{{--                            BODY--}}
+                            @if($details->header_video)
+                                <div class="mb-2">
+                                    {!! $details->header_video !!}
+                                </div>
+                            @endif
+                            {{--                            BODY--}}
                             {!! $details->content !!}
                         </div>
                     </div>
@@ -44,14 +47,16 @@
                                 <div class="form-group">
                                     <div class="input-group mb-3">
                                         <input type="text" class="form-control" placeholder='Search Keyword'
-                                               onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search Keyword'">
+                                               onfocus="this.placeholder = ''"
+                                               onblur="this.placeholder = 'Search Keyword'">
                                         <div class="input-group-append">
                                             <button class="btns" type="button"><i class="ti-search"></i></button>
                                         </div>
                                     </div>
                                 </div>
                                 <button class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
-                                        type="submit">Search</button>
+                                        type="submit">Search
+                                </button>
                             </form>
                         </aside>
                         <aside class="single_sidebar_widget post_category_widget">
@@ -206,7 +211,8 @@
                                            onblur="this.placeholder = 'Enter email'" placeholder='Enter email' required>
                                 </div>
                                 <button class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
-                                        type="submit">Subscribe</button>
+                                        type="submit">Subscribe
+                                </button>
                             </form>
                         </aside>
                     </div>
