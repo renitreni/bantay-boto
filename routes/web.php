@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Livewire\BlogCreate;
+use App\Http\Livewire\BlogDetails;
 use App\Http\Livewire\BlogEdit;
 use App\Http\Livewire\Blogs;
 use App\Http\Livewire\Landing;
@@ -11,7 +12,6 @@ use App\Http\Livewire\Roles;
 use App\Http\Livewire\UserCreate;
 use App\Http\Livewire\UserEdit;
 use App\Http\Livewire\UserForm;
-use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,7 +25,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', Landing::class)->name('user.create');
+Route::get('/', Landing::class)->name('home');
+Route::get('/bbm/{id}/{year}/{slug}', BlogDetails::class)->name('blog.details');
 
 Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::prefix('dashboard')->group(function () {

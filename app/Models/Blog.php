@@ -25,11 +25,30 @@ class Blog extends Model
 
     public static function topTrending()
     {
-        return (new self())->newQuery()->orderBy('created_at', 'desc')->with(['tags'])->first();
+        return (new self())->newQuery()
+            ->where('is_published', 1)
+            ->orderBy('created_at', 'desc')
+            ->with(['tags'])
+            ->first();
     }
 
     public static function latestUpload()
     {
-        return (new self())->newQuery()->orderBy('created_at', 'desc')->with(['tags'])->take(5)->get();
+        return (new self())->newQuery()
+            ->where('is_published', 1)
+            ->orderBy('created_at', 'desc')
+            ->with(['tags'])
+            ->take(6)
+            ->get();
+    }
+
+    public static function randomThree()
+    {
+        return (new self())->newQuery()
+            ->where('is_published', 1)
+            ->inRandomOrder()
+            ->with(['tags'])
+            ->take(3)
+            ->get();
     }
 }
