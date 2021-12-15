@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Livewire\AboutPage;
 use App\Http\Livewire\BlogCreate;
 use App\Http\Livewire\BlogDetails;
 use App\Http\Livewire\BlogEdit;
@@ -27,6 +28,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', Landing::class)->name('home');
 Route::get('/bbm/{id}/{year}/{slug}', BlogDetails::class)->name('blog.details');
+Route::get('/about', AboutPage::class)->name('home.about');
 
 Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::prefix('dashboard')->group(function () {

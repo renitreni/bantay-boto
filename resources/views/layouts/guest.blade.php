@@ -71,13 +71,14 @@
                         <!-- Logo -->
                         <div class="col-xl-3 col-lg-3 col-md-3">
                             <div class="logo">
-                                <a href="/"><img src="{{ asset('images/logo.png') }}" alt="" class="img-fluid" style="max-width: 140px"></a>
+                                <a href="/"><img src="{{ asset('images/logo.png') }}" alt="" class="img-fluid"
+                                                 style="max-width: 140px"></a>
                             </div>
                         </div>
                         <div class="col-xl-9 col-lg-9 col-md-9">
                             <div class="header-banner f-right ">
                                 {{---- ADS ----}}
-{{--                                <img src="{{ asset('theme/aznews-master/assets/img/hero/header_card.jpg') }}" alt="">--}}
+                                {{--                                <img src="{{ asset('theme/aznews-master/assets/img/hero/header_card.jpg') }}" alt="">--}}
                             </div>
                         </div>
                     </div>
@@ -96,30 +97,30 @@
                                 <nav>
                                     <ul id="navigation">
                                         <li><a href="/">Home</a></li>
-{{--                                        <li><a href="categori.html">Category</a></li>--}}
-{{--                                        <li><a href="about.html">About</a></li>--}}
-{{--                                        <li><a href="latest_news.html">Latest News</a></li>--}}
-{{--                                        <li><a href="contact.html">Contact</a></li>--}}
-{{--                                        <li><a href="#">Pages</a>--}}
-{{--                                            <ul class="submenu">--}}
-{{--                                                <li><a href="elements.html">Element</a></li>--}}
-{{--                                                <li><a href="blog.html">Blog</a></li>--}}
-{{--                                                <li><a href="single-blog.html">Blog Details</a></li>--}}
-{{--                                                <li><a href="details.html">Categori Details</a></li>--}}
-{{--                                            </ul>--}}
-{{--                                        </li>--}}
+                                        {{--                                        <li><a href="categori.html">Category</a></li>--}}
+                                        <li><a href="{{ route('home.about') }}">About</a></li>
+                                        {{--                                        <li><a href="latest_news.html">Latest News</a></li>--}}
+                                        {{--                                        <li><a href="contact.html">Contact</a></li>--}}
+                                        {{--                                        <li><a href="#">Pages</a>--}}
+                                        {{--                                            <ul class="submenu">--}}
+                                        {{--                                                <li><a href="elements.html">Element</a></li>--}}
+                                        {{--                                                <li><a href="blog.html">Blog</a></li>--}}
+                                        {{--                                                <li><a href="single-blog.html">Blog Details</a></li>--}}
+                                        {{--                                                <li><a href="details.html">Categori Details</a></li>--}}
+                                        {{--                                            </ul>--}}
+                                        {{--                                        </li>--}}
                                     </ul>
                                 </nav>
                             </div>
                         </div>
                         <div class="col-xl-2 col-lg-2 col-md-4">
                             <div class="header-right-btn f-right d-none d-lg-block">
-{{--                                <i class="fas fa-search special-tag"></i>--}}
-{{--                                <div class="search-box">--}}
-{{--                                    <form action="#">--}}
-{{--                                        <input type="text" placeholder="Search">--}}
-{{--                                    </form>--}}
-{{--                                </div>--}}
+                                {{--                                <i class="fas fa-search special-tag"></i>--}}
+                                {{--                                <div class="search-box">--}}
+                                {{--                                    <form action="#">--}}
+                                {{--                                        <input type="text" placeholder="Search">--}}
+                                {{--                                    </form>--}}
+                                {{--                                </div>--}}
                             </div>
                         </div>
                         <!-- Mobile Menu -->
@@ -151,10 +152,11 @@
                             </div>
                             <div class="footer-tittle">
                                 <div class="footer-pera">
-                                    <p>Suscipit mauris pede for con sectetuer sodales adipisci for cursus fames lectus
-                                        tempor da blandit gravida sodales Suscipit mauris pede for con sectetuer sodales
-                                        adipisci for cursus fames lectus tempor da blandit gravida sodales Suscipit
-                                        mauris pede for sectetuer.</p>
+                                    <p> All the way tayo mga ka-MaSa!✌️👊
+                                        President Bongbong Marcos and Vice President Mayor Inday Sara Duterte para "The
+                                        Philippines will be great again!"🇵🇭❤️💚
+                                        Wag bibitaw at bantayan ang boto!
+                                        #PBBM #VPSara</p>
                                 </div>
                             </div>
                             <!-- social -->
