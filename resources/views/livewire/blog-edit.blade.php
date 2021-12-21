@@ -105,7 +105,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" wire:model="destroy" class="btn btn-primary text-white" wire:model="destroy">I Confirm</button>
+                        <button type="button" wire:model="destroy" class="btn btn-primary text-white" wire:click="destroy">I Confirm</button>
                     </div>
                 </div>
             </div>
