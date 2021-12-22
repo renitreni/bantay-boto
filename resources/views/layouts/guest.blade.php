@@ -3,7 +3,6 @@
 <head>
     <title>{{ config('app.name', 'Laravel') }}</title>
     <!-- Meta -->
-    <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -50,7 +49,7 @@
                         <div class="row d-flex justify-content-between align-items-center">
                             <div class="header-info-left" x-data="timeTemp" x-init="initialize()">
                                 <ul>
-                                    <li><i class="fa fa-thermometer-empty"></i> 34ºc, Sunny</li>
+{{--                                    <li><i class="fa fa-thermometer-empty"></i> 34ºc, Sunny</li>--}}
                                     <li><i class="fas fa-clock"></i> <span x-text="time"></span></li>
                                 </ul>
                             </div>
@@ -97,7 +96,7 @@
                                 <nav>
                                     <ul id="navigation">
                                         <li><a href="/">Home</a></li>
-                                        {{--                                        <li><a href="categori.html">Category</a></li>--}}
+                                        <li><a href="{{ route('home.blog') }}">Blog</a></li>
                                         <li><a href="{{ route('home.about') }}">About</a></li>
                                         {{--                                        <li><a href="latest_news.html">Latest News</a></li>--}}
                                         {{--                                        <li><a href="contact.html">Contact</a></li>--}}
@@ -320,19 +319,5 @@
         }))
     });
 </script>
-
-<!-- Google Analytics -->
-<script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-    ga('create', 'UA-XXXX-Y', 'auto');
-    ga('send', 'pageview');
-
-</script>
-<!-- End Google Analytics -->
-
 </body>
 </html>

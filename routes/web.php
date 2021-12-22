@@ -4,6 +4,7 @@ use App\Http\Livewire\AboutPage;
 use App\Http\Livewire\BlogCreate;
 use App\Http\Livewire\BlogDetails;
 use App\Http\Livewire\BlogEdit;
+use App\Http\Livewire\BlogList;
 use App\Http\Livewire\Blogs;
 use App\Http\Livewire\Landing;
 use App\Http\Livewire\PermissionEdit;
@@ -29,6 +30,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', Landing::class)->name('home');
 Route::get('/bbm/{id}/{year}/{slug}', BlogDetails::class)->name('blog.details');
 Route::get('/about', AboutPage::class)->name('home.about');
+Route::get('/blog-list', BlogList::class)->name('home.blog');
 
 Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::prefix('dashboard')->group(function () {

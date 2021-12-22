@@ -19,6 +19,7 @@ class BlogDetails extends Component
 
     public function render()
     {
+        seo()->description($this->details->content);
         return view('livewire.blog-details')->layout('layouts.guest');
     }
 }
