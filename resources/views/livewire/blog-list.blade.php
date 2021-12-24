@@ -25,7 +25,7 @@
                                     <a class="d-inline-block" href="{{ route('blog.details', ['id'=>$article->id, 'year'=> \Carbon\Carbon::parse($article->created_at)->format('Y'), 'slug'=>$article->slug ]) }}">
                                         <h2>{{ $article->title }}</h2>
                                     </a>
-                                    <p class="text-truncate">{{ $article->content }}</p>
+                                    <p class="text-truncate">{!! $article->content !!}</p>
                                     <ul class="blog-info-link">
                                         <li>
                                             <a href="#"><i class="fa fa-user"></i>
