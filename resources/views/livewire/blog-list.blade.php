@@ -26,7 +26,7 @@
                                         <h2>{{ $article->title }}</h2>
                                     </a>
                                     <div>
-                                        {!! \Illuminate\Support\Str::words($article->content, 15) !!}
+                                        {!! \Illuminate\Support\Str::limit($article->content, 50) !!}
                                     </div>
                                     <ul class="blog-info-link">
                                         <li>
