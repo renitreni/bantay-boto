@@ -20,7 +20,6 @@ class Searchables extends Component
             ->groupBy('tag_id')
             ->inRandomOrder()
             ->get()
-            ->take(5)
             ->map(function ($tag) {
                 return [
                     'name'  => json_decode($tag->name)->en,

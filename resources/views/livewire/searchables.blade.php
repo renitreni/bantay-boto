@@ -21,13 +21,15 @@
         <aside class="single_sidebar_widget post_category_widget">
             <h4 class="widget_title">Category</h4>
             <ul class="list cat-list">
-                @foreach($tags_summary as $tag)
+                @foreach($tags_summary as $key => $tag)
+                    @if($key <= 4)
                     <li>
                         <a href="#" class="d-flex">
                             <p>{{ $tag['name'] }}</p>
                             <p>({{ $tag['count'] }})</p>
                         </a>
                     </li>
+                    @endif
                 @endforeach
             </ul>
         </aside>
