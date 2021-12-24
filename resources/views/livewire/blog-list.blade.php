@@ -26,7 +26,7 @@
                                         <h2>{{ $article->title }}</h2>
                                     </a>
                                     <div>
-                                        {!! \Illuminate\Support\Str::limit($article->content, 50) !!}
+                                        {!! \Illuminate\Support\Str::limit(strip_tags($article->content), 90) !!}
                                     </div>
                                     <ul class="blog-info-link">
                                         <li>
