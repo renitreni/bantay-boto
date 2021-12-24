@@ -18,8 +18,9 @@ class Searchables extends Component
             ->selectRaw('name, count(tag_id) as total')
             ->join('tags', 'tags.id', '=', 'taggables.tag_id')
             ->groupBy('tag_id')
-            ->orderBy('name', 'asc')
+            ->inRandomOrder()
             ->get()
+            ->take(5)
             ->map(function ($tag) {
                 return [
                     'name'  => json_decode($tag->name)->en,
