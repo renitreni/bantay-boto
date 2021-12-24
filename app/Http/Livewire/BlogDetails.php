@@ -15,11 +15,14 @@ class BlogDetails extends Component
         if(!$this->details) {
             return redirect()->route('home');
         }
+
+        session(['title' => $this->details->title]);
+        session(['content' => $this->details->content]);
+        session(['tags' => implode(',', array_map(fn($value) => $value['name']['en'],$this->details->tags->toArray()))]);
     }
 
     public function render()
     {
-        seo()->description($this->details->content);
         return view('livewire.blog-details')->layout('layouts.guest');
     }
 }

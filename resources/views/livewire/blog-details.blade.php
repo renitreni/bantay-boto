@@ -10,7 +10,7 @@
                                  alt="">
                         </div>
                         <div class="blog_details">
-                            <h2>{{ $details->title }}</h2>
+                            <h1>{{ $details->title }}</h1>
                             <ul class="blog-info-link mt-3 mb-4">
                                 <li><a href="#"><i class="fa fa-user"></i>
                                         @foreach($details->tags as $tag)

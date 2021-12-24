@@ -12,8 +12,13 @@ class BlogList extends Component
     protected $queryString = ['search'];
     protected $listeners   = ['searchCall'];
 
+
     public function render()
     {
+        session(['title' => 'Blogs']);
+        session(['content' => 'List of Posted Blogs']);
+        session(['tags' => 'bantay boto,blog,list']);
+
         $articles = Blog::query()->with(['tags'])
             ->when($this->search != '', function ($q) {
                 $q->where('title', 'like', "%$this->search%");

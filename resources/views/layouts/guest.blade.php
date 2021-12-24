@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
-    <title>{{ config('app.name', 'Laravel') }}</title>
-    <!-- Meta -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="manifest" href="site.webmanifest">
@@ -24,6 +21,8 @@
     <!-- Styles -->
     @stack('css')
     @livewireStyles
+    <livewire:s-e-o-header/>
+
 </head>
 <body>
 <!-- Preloader Start -->

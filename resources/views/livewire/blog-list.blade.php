@@ -5,7 +5,7 @@
         <div class="container">
             <div class="col-md-12">
                 @if($search)
-                    <h2>Search for: '{{$search}}'</h2>
+                    <label class="fs-4">Search for: '{{$search}}'</label>
                 @endif
             </div>
             <div class="row">
