@@ -23,6 +23,7 @@
     @livewireStyles
     <livewire:s-e-o-header/>
 
+    <!-- Bidvertiser2064942 -->
 </head>
 <body>
 <!-- Preloader Start -->
