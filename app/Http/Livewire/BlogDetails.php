@@ -16,6 +16,7 @@ class BlogDetails extends Component
             return redirect()->route('home');
         }
 
+        session(['header_img' => $this->details->header_img]);
         session(['title' => $this->details->title]);
         session(['content' => $this->details->content]);
         session(['tags' => implode(',', array_map(fn($value) => $value['name']['en'],$this->details->tags->toArray()))]);
