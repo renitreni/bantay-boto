@@ -6,7 +6,10 @@ use App\Http\Livewire\BlogDetails;
 use App\Http\Livewire\BlogEdit;
 use App\Http\Livewire\BlogList;
 use App\Http\Livewire\Blogs;
+use App\Http\Livewire\ConfimVote;
+use App\Http\Livewire\Dashboard;
 use App\Http\Livewire\Landing;
+use App\Http\Livewire\OnlineSurvey;
 use App\Http\Livewire\PermissionEdit;
 use App\Http\Livewire\RoleCreate;
 use App\Http\Livewire\RoleEdit;
@@ -31,10 +34,12 @@ Route::get('/', Landing::class)->name('home');
 Route::get('/bbm/{id}/{year}/{slug}', BlogDetails::class)->name('blog.details');
 Route::get('/about', AboutPage::class)->name('home.about');
 Route::get('/blog-list', BlogList::class)->name('home.blog');
+Route::get('/online-survey', OnlineSurvey::class)->name('home.online.survey');
+Route::get('/confirm/{code}', ConfimVote::class)->name('confirm.vote');
 
 Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::prefix('dashboard')->group(function () {
-        Route::get('/', fn() => view('dashboard'))->name('dashboard');
+        Route::get('/', Dashboard::class)->name('dashboard');
     });
     Route::prefix('blogs')->group(function () {
         Route::get('/', Blogs::class)->name('blogs');

@@ -14,15 +14,15 @@
                 <div class="col-lg-4 d-flex flex-column justify-content-center">
                     <h1 style="color: white; text-shadow: 0px 0px 7px #0b0b0b">Bantayan, Boto Mo!</h1>
                     <h3 style="color: #f7f7f7; text-shadow: 0px 0px 7px #0b0b0b">A socio-civic organization supporting Bongbong Marcos for President in 2022</h3>
-{{--                    <div data-aos="fade-up" data-aos-delay="600">--}}
-{{--                        <div class="text-center text-lg-start">--}}
-{{--                            <a href="#" data-bs-toggle="modal" data-bs-target="#joinTeamMdl"--}}
-{{--                               class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">--}}
-{{--                                <span>Join Our Team</span>--}}
-{{--                                <i class="bi bi-arrow-right"></i>--}}
-{{--                            </a>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
+                    <div data-aos="fade-up" data-aos-delay="600">
+                        <div class="text-center text-lg-start">
+                            <a href="{{ route('home.online.survey') }}" data-bs-toggle="modal" data-bs-target="#joinTeamMdl"
+                               class="btn btn-info">
+                                <span>Join Online Survey!</span>
+                                <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-lg-8 hero-img" data-aos="zoom-out" data-aos-delay="200">
                     <img src="{{ asset('images/header.png') }}" style="width: 100% !important;" alt="">

@@ -49,7 +49,7 @@
                         <div class="row d-flex justify-content-between align-items-center">
                             <div class="header-info-left" x-data="timeTemp" x-init="initialize()">
                                 <ul>
-{{--                                    <li><i class="fa fa-thermometer-empty"></i> 34ºc, Sunny</li>--}}
+                                    {{--                                    <li><i class="fa fa-thermometer-empty"></i> 34ºc, Sunny</li>--}}
                                     <li><i class="fas fa-clock"></i> <span x-text="time"></span></li>
                                 </ul>
                             </div>
@@ -325,12 +325,14 @@
     /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
     _paq.push(['trackPageView']);
     _paq.push(['enableLinkTracking']);
-    (function() {
-        var u="https://bongbongsaraph.matomo.cloud/";
-        _paq.push(['setTrackerUrl', u+'matomo.php']);
+    (function () {
+        var u = "https://bongbongsaraph.matomo.cloud/";
+        _paq.push(['setTrackerUrl', u + 'matomo.php']);
         _paq.push(['setSiteId', '1']);
-        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-        g.async=true; g.src='//cdn.matomo.cloud/bongbongsaraph.matomo.cloud/matomo.js'; s.parentNode.insertBefore(g,s);
+        var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+        g.async = true;
+        g.src = '//cdn.matomo.cloud/bongbongsaraph.matomo.cloud/matomo.js';
+        s.parentNode.insertBefore(g, s);
     })();
 </script>
 <!-- End Matomo Code -->
