@@ -4,6 +4,10 @@
             <div class="col-lg-12 posts-listm mt-4 mb-3">
                 <div class="card bg-white shadow">
                     <div class="card-body">
+                        <div class="d-flex">
+                            <h2>Online Survey</h2>
+                        </div>
+                        <hr>
                         <div class="d-flex flex-wrap">
                             @foreach($presidentials as $item)
                                 <div class="d-flex flex-column justify-content-center m-4">
@@ -11,14 +15,13 @@
                                         <img src="{{ $item->path }}" style="width: 130px; height: 130px"
                                              class="img-fluid rounded-circle">
                                     </div>
-
                                     <label class="text-center mt-2">{{ $item->name }}</label>
                                     <label class="text-center font-weight-bold">{{ \App\Models\Vote::getVerifiedCount($item->id) }} votes</label>
 
                                     <button type="button" class="genric-btn info-border" data-toggle="modal"
                                             data-target="#exampleModal"
                                             wire:click="setID('{{ $item->name }}', {{ $item->id }})">
-                                        CLICK TO VOTES
+                                        CLICK TO VOTE
                                     </button>
                                 </div>
                             @endforeach
