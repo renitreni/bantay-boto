@@ -28,7 +28,7 @@ class OnlineSurvey extends Component
     public function store()
     {
         $this->validate([
-            'email' => 'required|unique:votes|email',
+            'email' => 'required|unique:votes|email:rfc,dns',
             'name'  => 'required|max:200',
         ]);
 
@@ -47,7 +47,6 @@ class OnlineSurvey extends Component
         $this->personnel_id = null;
         $this->email        = null;
         $this->name         = null;
-
         session()->flash('message', 'Please see your e-mail to confirm your vote.');
     }
 
