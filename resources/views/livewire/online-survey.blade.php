@@ -11,12 +11,14 @@
                                         <img src="{{ $item->path }}" style="width: 130px; height: 130px"
                                              class="img-fluid rounded-circle">
                                     </div>
-                                    {{ \App\Models\Vote::getVerifiedCount($item->id) }}
+
                                     <label class="text-center mt-2">{{ $item->name }}</label>
+                                    <label class="text-center font-weight-bold">{{ \App\Models\Vote::getVerifiedCount($item->id) }} votes</label>
+
                                     <button type="button" class="genric-btn info-border" data-toggle="modal"
                                             data-target="#exampleModal"
                                             wire:click="setID('{{ $item->name }}', {{ $item->id }})">
-                                        VOTE
+                                        CLICK TO VOTES
                                     </button>
                                 </div>
                             @endforeach
