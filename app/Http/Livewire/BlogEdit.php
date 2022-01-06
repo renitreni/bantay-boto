@@ -68,7 +68,7 @@ class BlogEdit extends Component
                 'header_video' => $this->header_video,
                 'header_img'   => $this->header_img,
                 'title'        => $this->title,
-                'slug'         => $this->title,
+                'slug'         => str_slug($this->title),
                 'content'      => $this->content,
                 'is_published' => $this->is_published,
                 'author'       => auth()->user()->name,
