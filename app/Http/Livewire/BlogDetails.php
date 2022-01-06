@@ -11,7 +11,7 @@ class BlogDetails extends Component
 
     public function mount($id, $year, $slug)
     {
-        $this->details = Blog::query()->where('id', $id)->with(['tags'])->first();
+        $this->details = Blog::query()->where('id', $id)->where('slug', $slug)->with(['tags'])->first();
         if(!$this->details) {
             return redirect()->route('home');
         }
