@@ -171,7 +171,7 @@
                     <div class="single-footer-caption mt-60">
                         <div class="footer-tittle">
                             <h4>Newsletter</h4>
-                            <p>Heaven fruitful doesn't over les idays appear creeping</p>
+                            <p>You may provide your e-mail below. You will be updated everytime we post.</p>
                             <!-- Form -->
                             <div class="footer-form">
                                 <div id="mc_embed_signup">
@@ -184,8 +184,10 @@
                                                onblur="this.placeholder = ' Email Address '">
                                         <div class="form-icon">
                                             <button type="submit" name="submit" id="newsletter-submit"
-                                                    class="email_icon newsletter-submit button-contactForm"><img
-                                                    src="assets/img/logo/form-iocn.png" alt=""></button>
+                                                    class="email_icon newsletter-submit button-contactForm">
+                                                <img
+                                                    src="{{ asset('theme/aznews-master/assets/img/logo/form-iocn.png') }}"
+                                                    alt=""></button>
                                         </div>
                                         <div class="mt-10 info"></div>
                                     </form>
@@ -197,7 +199,7 @@
                 <div class="col-xl-3 col-lg-3 col-md-5 col-sm-6">
                     <div class="single-footer-caption mb-50 mt-60">
                         <div class="footer-tittle">
-                            <h4>Instagram Feed</h4>
+
                         </div>
                         <div class="instagram-gellay">
                             <ul class="insta-feed">
