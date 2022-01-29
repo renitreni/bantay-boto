@@ -17,6 +17,7 @@ use App\Http\Livewire\Roles;
 use App\Http\Livewire\UserCreate;
 use App\Http\Livewire\UserEdit;
 use App\Http\Livewire\UserForm;
+use App\Models\Newsletter;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -36,6 +37,13 @@ Route::get('/about', AboutPage::class)->name('home.about');
 Route::get('/blog-list', BlogList::class)->name('home.blog');
 Route::get('/online-survey', OnlineSurvey::class)->name('home.online.survey');
 Route::get('/confirm/{code}', ConfimVote::class)->name('confirm.vote');
+
+Route::post('/newsletter', function (\Illuminate\Http\Request $request){
+  Newsletter::query()->insert([
+      'email' => $request->email,
+      'is_subscribed' => 1,
+  ]);
+})->name('newsletter');
 
 Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::prefix('dashboard')->group(function () {
