@@ -36,7 +36,7 @@ class SendConfirmation extends Mailable
 
         return $this->from('do-not-reply@bongbongsaraph.com')
             ->subject('BANTAY BOTO ONLINE SURVEY')
-            ->html('<p>Hi Hadji,</p>
+            ->html('<p>Hi '.$this->name.',</p>
             <p>This message is generated from&nbsp;<a href="//bonbonsaraph.com">bonbongsaraph.com</a> Online Survey.
             <br><br>Please click below link to count your vote:<br>
              '.route('confirm.vote', ['code' => $hashed]).'&nbsp;
