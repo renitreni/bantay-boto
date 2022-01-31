@@ -16,7 +16,7 @@
                             </div>
                             <div class="about-prea">
                                 {{--BODY--}}
-                                {{ $about->content }}
+                                {!! nl2br(e($about->content)) !!}
                             </div>
                         </div>
                     </div>
