@@ -65,9 +65,10 @@
                                             @foreach($trending_top->tags as $tag)
                                                 <span>{{ $tag->name }}</span>
                                             @endforeach
-                                            <h2><a
-                                                    href="{{ route('blog.details', ['id'=>$trending_top->id, 'year'=> \Carbon\Carbon::parse($trending_top->created_at)->format('Y'), 'slug'=>$trending_top->slug ]) }}"
+                                            <h2>
+                                                <a href="{{ route('blog.details', ['id'=>$trending_top->id, 'year'=> \Carbon\Carbon::parse($trending_top->created_at)->format('Y'), 'slug'=>$trending_top->slug ]) }}"
                                                 >{{ $trending_top->title }}</h2>
+                                            <small>{{ \Carbon\Carbon::parse($trending_top->created_at)->format('F j, Y') }}</small>
                                         </div>
                                     </div>
                                 </div>
@@ -93,6 +94,7 @@
                                                             {{ $item->title }}
                                                         </a>
                                                     </h4>
+                                                        <small>{{ \Carbon\Carbon::parse($item->created_at)->format('F j, Y') }}</small>
                                                 </div>
                                             </div>
                                         </div>
@@ -116,6 +118,7 @@
                                             <h4>
                                                 <a href="{{ route('blog.details', ['id'=>$upload->id, 'year'=> \Carbon\Carbon::parse($upload->created_at)->format('Y'), 'slug'=>$upload->slug ]) }}"
                                                 >{{ $upload->title }}</a></h4>
+                                            <small>{{ \Carbon\Carbon::parse($upload->created_at)->format('F j, Y') }}</small>
                                         </div>
                                     </div>
                                 @endif
