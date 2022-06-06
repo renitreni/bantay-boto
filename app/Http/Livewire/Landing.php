@@ -18,7 +18,7 @@ class Landing extends Component
         session(['tags' => 'politics,article,latest,blogs']);
         $this->trending_top  = Blog::topTrending();
         $this->latest_upload = Blog::latestUpload();
-        $this->random_three  = Blog::randomThree();
+        $this->random_three  = Blog::randomByCount(10);
     }
 
     public function render()

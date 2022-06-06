@@ -12,19 +12,12 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 d-flex flex-column justify-content-center">
-                    <h1 style="color: white; text-shadow: 0px 0px 7px #0b0b0b">Bantayan, Boto Mo!</h1>
-                    <h3 style="color: #f7f7f7; text-shadow: 0px 0px 7px #0b0b0b">A socio-civic organization supporting
-                        Bongbong Marcos for President in 2022</h3>
-                    <div data-aos="fade-up" data-aos-delay="600">
-                        <div class="text-center text-lg-start">
-                            <a href="{{ route('home.online.survey') }}" data-bs-toggle="modal"
-                               data-bs-target="#joinTeamMdl"
-                               class="btn btn-info">
-                                <span>Join Online Survey!</span>
-                                <i class="bi bi-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
+                    <h1 style="color: white; text-shadow: 0px 0px 7px #0b0b0b">
+                        Bantayan, Boto Mo!
+                    </h1>
+                    <h3 style="color: #f7f7f7; text-shadow: 0px 0px 7px #0b0b0b">
+                        A socio-civic organization supporting Bongbong Marcos for his Presidency
+                    </h3>
                 </div>
                 <div class="col-lg-8 hero-img" data-aos="zoom-out" data-aos-delay="200">
                     <img src="{{ asset('images/header.png') }}" style="width: 100% !important;" alt="">
@@ -77,7 +70,7 @@
                             <div class="trending-bottom">
                                 <div class="row">
                                     @foreach($this->random_three as $item)
-                                        <div class="col-lg-4">
+                                        <div class="col-lg-6">
                                             <div class="single-bottom mb-35">
                                                 <div class="trend-bottom-img mb-30">
                                                     <img src="{{ $item->header_img }}" alt=""
@@ -90,7 +83,7 @@
                                                     <h4>
                                                         <a href="{{ route('blog.details', ['id'=>$item->id, 'year'=> \Carbon\Carbon::parse($item->created_at)->format('Y'), 'slug'=>$item->slug ]) }}"
                                                            class="d-inline-block text-truncate"
-                                                           style="max-width: 180px;">
+                                                           style="max-width: 100%;">
                                                             {{ $item->title }}
                                                         </a>
                                                     </h4>
@@ -130,38 +123,4 @@
         </div>
         <!-- Trending Area End -->
     </main>
-    <section>
-        <div class='tableauPlaceholder' id='viz1643170873478'
-             style='position: relative;margin-left: auto;margin-right: auto;'>
-            <object class='tableauViz' style='display:none;'>
-                <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F'/>
-                <param name='embed_code_version' value='3'/>
-                <param name='site_root' value=''/>
-                <param name='name' value='2022VoterRegistrationTracker_16197131626910&#47;VoterTrackerDashboard'/>
-                <param name='tabs' value='no'/>
-                <param name='toolbar' value='yes'/>
-                <param name='animate_transition' value='yes'/>
-                <param name='display_static_image' value='yes'/>
-                <param name='display_spinner' value='yes'/>
-                <param name='display_overlay' value='yes'/>
-                <param name='display_count' value='yes'/>
-                <param name='language' value='en-US'/>
-            </object>
-        </div>
-        <script type='text/javascript'>                    var divElement = document.getElementById('viz1643170873478');
-            var vizElement = divElement.getElementsByTagName('object')[0];
-            if (divElement.offsetWidth > 800) {
-                vizElement.style.width = '1000px';
-                vizElement.style.height = '827px';
-            } else if (divElement.offsetWidth > 500) {
-                vizElement.style.width = '1000px';
-                vizElement.style.height = '827px';
-            } else {
-                vizElement.style.width = '100%';
-                vizElement.style.height = '1427px';
-            }
-            var scriptElement = document.createElement('script');
-            scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-            vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
-    </section>
 </div>

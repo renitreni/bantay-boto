@@ -51,4 +51,14 @@ class Blog extends Model
             ->take(3)
             ->get();
     }
+
+    public static function randomByCount($default = 1)
+    {
+        return (new self())->newQuery()
+            ->where('is_published', 1)
+            ->inRandomOrder()
+            ->with(['tags'])
+            ->take($default)
+            ->get();
+    }
 }
