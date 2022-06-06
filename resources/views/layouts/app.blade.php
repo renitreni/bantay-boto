@@ -19,6 +19,16 @@
         <script src="{{ mix('js/app.js') }}" defer></script>
 
         @stack('scripts-css')
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-1B8VPMXEZJ"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-1B8VPMXEZJ');
+        </script>
     </head>
     <body class="font-sans antialiased bg-light">
         <x-jet-banner />
