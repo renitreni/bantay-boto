@@ -338,7 +338,5 @@
         }))
     });
 </script>
-<!-- End Matomo Code -->
-<script data-ad-client="ca-pub-4525260285402261" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </body>
 </html>
